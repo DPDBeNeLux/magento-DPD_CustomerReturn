@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * DPD Customerreturn configuration
+ *
+ * @author Michiel Van Gucht
+ */
+-->
+<config>
+    <modules>
+        <DPD_Customerreturn>
+            <version>0.0.1</version>
+        </DPD_Customerreturn>
+    </modules>
+    
+    <global>
+	    <models>
+			<dpd_customerreturn>
+				<class>DPD_Customerreturn_Model</class>
+			</dpd_customerreturn>
+	   </models>
+	   <helpers>
+            <dpd_customerreturn>
+                <class>DPD_Customerreturn_Helper</class>
+            </dpd_customerreturn>
+        </helpers>
+    </global>
+	
+	<frontend>
+		<routers>
+            <dpd_customerreturn>
+                <use>standard</use>
+                <args>
+                    <module>DPD_Customerreturn</module>
+                    <frontName>customerorderreturn</frontName>
+                </args>
+            </dpd_customerreturn>
+        </routers>
+		<layout>
+            <updates>
+                <dpd_customerreturn>
+                    <file>dpd_customerreturn.xml</file>
+                </dpd_customerreturn>
+            </updates>
+        </layout>
+	</frontend>
+</config>

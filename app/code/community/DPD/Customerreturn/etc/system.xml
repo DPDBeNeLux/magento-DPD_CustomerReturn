@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * DPD Customerreturn configuration
+ *
+ * @author Michiel Van Gucht
+ */
+-->
+<config>
+    <sections>
+        <shipping>
+            <groups>
+                <dpd_customerreturn translate="label" module="dpd">
+                    <label>DPD Returns</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+					    <enabled translate="label comment">
+                            <label>Enable return by customer</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Allows customers to return their orders from their account</comment>
+                        </enabled>
+                        <leadtime translate="label comment" module="dpd_customerreturn">
+                            <label>Allow returns of orders younger than...</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>In days. Leave empty for no limit.</comment>
+                            <validate>validate-digits</validate>
+                            <depends><enabled>1</enabled></depends>
+                        </leadtime>
+                        <return_partially_shipped translate="label">
+                            <label>Allow return of partially shipped orders</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><enabled>1</enabled></depends>
+                        </return_partially_shipped>
+                    </fields>
+                </dpd_customerreturn>
+            </groups>
+        </shipping>
+    </sections>
+</config>

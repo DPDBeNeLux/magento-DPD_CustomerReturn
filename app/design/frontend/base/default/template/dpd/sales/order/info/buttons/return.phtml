@@ -1,0 +1,6 @@
+<?php $_order = $this->getOrder() ?>
+
+    <?php if(Mage::helper('dpd_customerreturn')->canReturn($_order)): ?>
+        <span class="separator">|</span>
+        <a href="<?php echo $this->getUrl('customerorderreturn/order/return', array('order_id' => $_order->getId(), '_secure'=>true)) ?>" class="link-reorder"><?php echo $this->__('Return Order') ?></a>
+    <?php endif ?>

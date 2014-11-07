@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * DPD Customerreturn initial configuration
+ *
+ * @author Michiel Van Gucht
+ */
+-->
+<config>
+    <modules>
+        <DPD_Customerreturn>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <DPD_Shipping />
+            </depends>
+        </DPD_Customerreturn>
+    </modules>
+</config>

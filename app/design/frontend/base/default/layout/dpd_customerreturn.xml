@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * DPD Customerreturn configuration
+ *
+ * @author Michiel Van Gucht
+ */
+-->
+<layout version="0.0.1">
+	<sales_order_view>
+		<reference name="sales.order.info.buttons">
+			<block type="sales/order_info_buttons" name="customer.order.return.button" as="customer_order_return_button" template="dpd/sales/order/info/buttons/return.phtml"></block>
+		</reference>
+	</sales_order_view>
+</layout>
